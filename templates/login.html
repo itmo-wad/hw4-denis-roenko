@@ -1,0 +1,29 @@
+{% extends 'authTemplate.html' %}
+
+{% block title %}Login{% endblock%}
+
+{% block content %}
+    <div class="container">
+        <form method="post" class="needs-validation" novalidate>
+            <div class="center-content">
+                <h2>Log in</h2>
+            </div>
+            
+            <label for="username">Username</label>
+            <input type="text" class="form-control" name="username" id="username" required>
+            <div class="invalid-feedback">Please choose username</div>
+                 
+            <label for="password">Password</label>
+            <input type="password" class="form-control" name="password" id="password" required minlength="6">
+            <div class="invalid-feedback">Please enter password</div>
+
+            <div class="center-content">
+                <button class="btn btn-primary" type="submit">Log in</button>
+            </div>
+
+            <div class="center-content">
+                <span class='mx-3'>Not registered? <a href='/register/'>Register</a></span>
+            </div>
+        </form>
+    </div>
+{% endblock %}
